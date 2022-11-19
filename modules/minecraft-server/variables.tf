@@ -18,15 +18,15 @@ variable "vpc_subnet_ids" {
   type = list(string)
 }
 
-# variable "max_azs" {
-#   default = 3
+variable "key_name" {
+  description = "AWS EC2 key pair name to use with the instance"
+  type        = string
+}
 
-#   validation {
-#     condition     = var.max_azs <= 10
-#     error_message = "Only up to 10 AZs are currently supported."
-#   }
-# }
+variable "hosted_zone_id" {
+  type = string
+}
 
-# variable "vpc_cidr" {
-#   default = "10.0.0.0/16"
-# }
+variable "hosted_zone_name" {
+  type = string
+}
